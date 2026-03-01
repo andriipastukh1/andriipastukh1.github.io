@@ -1,0 +1,179 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #3b5998;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header > a {
+  text-decoration: none;
+  color: white;
+}
+
+.logo h1 {
+  margin: 0;
+  padding-left: 10px;
+}
+
+nav {
+  margin-right: 10px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .logo h1 {
+    padding-left: 0;
+    margin-bottom: 15px;
+  }
+
+  nav {
+    margin-right: 0;
+  }
+
+  nav ul li {
+    display: block;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+main {
+  width: 88%;
+  margin: 25px auto;
+  min-height: 50vh;
+}
+
+h2 {
+  color: #333;
+}
+
+.grid-goals {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 12px;
+  border-radius: 5px;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #3b5998;
+}
+
+.prog-box {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 15px;
+}
+
+canvas {
+  border: 1px solid #999;
+  background-color: #f1f1f1;
+  max-width: 100%;
+}
+
+.post {
+  background-color: #e9ecef;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-left: 3px solid #3b5998;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  margin-top: auto;
+}
+
+@media (max-width: 768px) {
+  .grid-goals {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .logo h1 {
+    padding-left: 0;
+    margin-bottom: 15px;
+  }
+
+  nav {
+    margin-right: 0;
+  }
+
+  nav ul li {
+    display: block;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .grid-goals {
+    grid-template-columns: 1fr;
+  }
+}

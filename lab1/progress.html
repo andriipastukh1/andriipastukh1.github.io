@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Мій Прогрес</title>
+<link rel="icon" href="favicon-32x32.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <a href="index.html">
+  <div class="logo">
+    <h1>Цілі</h1>
+  </div>
+  </a>
+  <nav>
+    <ul>
+      <li><a href="aims.html">Мої цілі</a></li>
+      <li><a href="progress.html">Прогрес</a></li>
+      <li><a href="community.html">Спільнота</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section id="prog">
+    <h2>Мій Прогрес</h2>
+    <div class="prog-box">
+      <p>Ось мій графік досягнень за цей місяць. Лінія показує мою активність та закриті дрібні задачі:</p>
+      
+      <canvas id="myCanvas" width="400" height="200"></canvas>
+      
+      <p>Отримані нагороди:</p>
+      <ul>
+        <li>Перший мільйон (поки що в мріях)</li>
+        <li>Прочитано 5 книг</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<br><br><br>
+
+<footer>
+  <p>Контакти для зв'язку:</p>
+  <p>Адреса: вул. Студентська 1, м. Львів</p>
+  <p>Телефон: +38 (099) 123-45-67</p>
+  <p>Email: myemail@gmail.com</p>
+</footer>
+
+<script>
+  var canvas = document.getElementById("myCanvas");
+  var ctx = canvas.getContext("2d");
+  
+  ctx.beginPath();
+  ctx.moveTo(20, 180);
+  ctx.lineTo(100, 120);
+  ctx.lineTo(200, 150);
+  ctx.lineTo(350, 40);
+  ctx.strokeStyle = "green";
+  ctx.lineWidth = 3;
+  ctx.stroke();
+</script>
+
+</body>
+</html>
