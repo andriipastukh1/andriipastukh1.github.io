@@ -4,6 +4,7 @@ import GoalCard from '../components/GoalCard';
 const MyGoals = () => {
   const [filter, setFilter] = useState('всі');
   const [newGoal, setNewGoal] = useState({ title: '', description: '' });
+  const [targetDate, setTargetDate] = useState('');
   
   const [goals, setGoals] = useState(() => {
     const saved = localStorage.getItem('goalstream_data');
@@ -11,9 +12,9 @@ const MyGoals = () => {
       return JSON.parse(saved);
     }
     return [
-      { id: 1, title: 'Вивчити React Hooks', description: 'Опанувати useState, useEffect та власні хуки для створення гнучких інтерфейсів.', status: 'активні', progress: 65, deadline: '25.04.2024' },
-      { id: 2, title: 'Завершити Lab 3', description: 'Реалізувати SPA на React з використанням Router та стильного дизайну.', status: 'завершені', progress: 100, deadline: '19.04.2024' },
-      { id: 3, title: 'Прочитати "Refactoring UI"', description: 'Вивчити основи дизайну для розробників.', status: 'активні', progress: 30, deadline: '01.05.2024' }
+      { id: 1, title: 'Вивчити React Hooks', description: 'Опанувати useState, useEffect та власні хуки для створення гнучких інтерфейсів.', status: 'активні', progress: 65, deadline: '2024-04-25' },
+      { id: 2, title: 'Завершити Lab 3', description: 'Реалізувати SPA на React з використанням Router та стильного дизайну.', status: 'завершені', progress: 100, deadline: '2024-04-19' },
+      { id: 3, title: 'Прочитати "Refactoring UI"', description: 'Вивчити основи дизайну для розробників.', status: 'активні', progress: 30, deadline: '2024-05-01' }
     ];
   });
 
@@ -31,11 +32,12 @@ const MyGoals = () => {
       description: newGoal.description,
       status: 'активні',
       progress: 0,
-      deadline: 'Травень 2024'
+      deadline: targetDate
     };
 
     setGoals([goal, ...goals]);
     setNewGoal({ title: '', description: '' });
+    setTargetDate('');
   };
 
   const deleteGoal = (id) => {
@@ -68,19 +70,31 @@ const MyGoals = () => {
       </header>
 
       <form className="add-goal-form" onSubmit={addGoal}>
-        <input 
-          type="text" 
-          placeholder="Назва цілі..." 
-          value={newGoal.title}
-          onChange={(e) => setNewGoal({ ...newGoal, title: e.target.value })}
-        />
-        <input 
-          type="text" 
-          placeholder="Короткий опис..." 
-          value={newGoal.description}
-          onChange={(e) => setNewGoal({ ...newGoal, description: e.target.value })}
-        />
-        <button type="submit">Додати</button>
+        <div style={{ display: 'flex', gap: '0.75rem', width: '100%' }}>
+          <input 
+            type="text" 
+            placeholder="Назва цілі..." 
+            value={newGoal.title}
+            onChange={(e) => setNewGoal({ ...newGoal, title: e.target.value })}
+            style={{ flex: 1 }}
+          />
+          <input 
+            type="date" 
+            className="date-input"
+            value={targetDate}
+            onChange={(e) => setTargetDate(e.target.value)}
+          />
+        </div>
+        <div style={{ display: 'flex', gap: '0.75rem', width: '100%' }}>
+          <input 
+            type="text" 
+            placeholder="Короткий опис..." 
+            value={newGoal.description}
+            onChange={(e) => setNewGoal({ ...newGoal, description: e.target.value })}
+            style={{ flex: 1 }}
+          />
+          <button type="submit">Додати</button>
+        </div>
       </form>
 
       <div className="filter-bar">

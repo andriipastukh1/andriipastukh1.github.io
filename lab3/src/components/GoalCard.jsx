@@ -62,7 +62,7 @@ const GoalCard = ({ goal, onDelete, onToggle }) => {
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
           <Calendar size={12} />
-          <span>До {goal.deadline}</span>
+          <span>{goal.deadline ? `До: ${goal.deadline}` : 'Без дедлайну'}</span>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
           <BarChart3 size={12} />
