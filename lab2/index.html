@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Головна - FocusBuddy</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="logo"><h1>FocusBuddy</h1></div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Головна</a></li>
+      <li><a href="aims.html">Мої цілі</a></li>
+      <li><a href="progress.html">Прогрес</a></li>
+      <li><a href="community.html">Спільнота</a></li>
+      <li><button id="theme-toggle">Темна тема</button></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section id="welcome" class="card welcome-section">
+    <h2 id="dynamic-greeting">Вітаємо у FocusBuddy!</h2>
+    <p>Твій персональний простір для організації університетських проєктів, щоденних задач та крутих ідей.</p>
+    
+    <div class="main-progress-wrapper">
+      <p class="progress-label"><strong>Загальний прогрес: <span id="main-progress-text">0%</span></strong></p>
+      <div class="progress-container">
+        <div class="progress-fill" id="main-progress-fill"></div>
+      </div>
+    </div>
+
+    <a href="aims.html" class="go-aims-btn welcome-btn">Перейти до моїх цілей →</a>
+  </section>
+
+  <section id="quick-add" class="card">
+    <h3>Швидко додати ціль</h3>
+    <form id="quick-goal-form" class="quick-form">
+      <input type="text" id="quick-goal-input" class="quick-input" placeholder="Наприклад: Підготуватись до семінару..." required>
+      <button type="submit" class="quick-btn">Додати</button>
+    </form>
+    <p id="quick-add-msg" class="quick-msg">Ціль успішно додано!</p>
+  </section>
+</main>
+
+<footer>
+  <p>Контакти для зв'язку:</p>
+  <p>Адреса: м. Львів</p>
+  <p>Email: myemail@gmail.com</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Мої цілі - FocusBuddy</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <a href="index.html"><div class="logo"><h1>FocusBuddy</h1></div></a>
+  <nav>
+    <ul>
+      <li><a href="index.html">Головна</a></li>
+      <li><a href="aims.html">Мої цілі</a></li>
+      <li><a href="progress.html">Прогрес</a></li>
+      <li><a href="community.html">Спільнота</a></li>
+      <li><button id="theme-toggle">Темна тема</button></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section id="goals">
+    <h2>Список цілей</h2>
+    <p>Тут я відслідковую свої плани на найближче майбутнє.</p>
+
+    <div id="motivational-timer">Завантаження таймера...</div>
+
+    <div class="card add-goal-card">
+      <h3>Додати нову ціль</h3>
+      <form id="full-goal-form">
+        <div class="form-group">
+          <label for="goal-title">Назва цілі:</label>
+          <input type="text" id="goal-title" placeholder="Наприклад: Запустити тестовий проєкт" required>
+        </div>
+        <div class="form-group">
+          <label for="goal-deadline">Дедлайн:</label>
+          <input type="text" id="goal-deadline" placeholder="Наприклад: до 25 травня" required>
+        </div>
+        <div class="form-group">
+          <label for="goal-tasks">Що треба зробити (кроки через кому):</label>
+          <input type="text" id="goal-tasks" placeholder="Скласти план, Знайти ресурси, Написати код" required>
+        </div>
+        <button type="submit" class="add-goal-submit">Створити ціль</button>
+      </form>
+    </div>
+
+    <div class="filters">
+      <button id="filter-all" class="filter-btn active" onclick="setFilter('all')">Всі цілі</button>
+      <button id="filter-active" class="filter-btn" onclick="setFilter('active')">Активні</button>
+      <button id="filter-completed" class="filter-btn" onclick="setFilter('completed')">Виконані</button>
+    </div>
+    
+    <div class="grid-goals" id="goals-container"></div>
+  </section>
+</main>
+
+<footer>
+  <p>Контакти для зв'язку:</p>
+  <p>Email: myemail@gmail.com</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
