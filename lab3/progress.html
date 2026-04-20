@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Прогрес - FocusBuddy</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <a href="index.html"><div class="logo"><h1>FocusBuddy</h1></div></a>
+  <nav>
+    <ul>
+      <li><a href="index.html">Головна</a></li>
+      <li><a href="aims.html">Мої цілі</a></li>
+      <li><a href="progress.html">Прогрес</a></li>
+      <li><a href="community.html">Спільнота</a></li>
+      <li><button id="theme-toggle">Темна тема</button></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section id="prog">
+    <h2>Аналітика продуктивності</h2>
+    <div class="card">
+      <p>Графік виконаних та активних задач:</p>
+      
+      <div class="canvas-wrapper">
+        <canvas id="progressCanvas" width="400" height="250"></canvas>
+      </div>
+      
+      <h3>Поточна статистика:</h3>
+      <ul id="stats-list" class="stats-list">
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>FocusBuddy - Твій інструмент досягнення цілей</p>
+  <p>Email: myemail@gmail.com</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
