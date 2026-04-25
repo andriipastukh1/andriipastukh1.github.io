@@ -68,6 +68,8 @@ const MyGoals = () => {
         <h1 className="page-title">Цілі</h1>
         <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Керуйте своїми планами та досягненнями</p>
       </header>
+      {filter === 'всі' && (
+
 
       <form className="add-goal-form" onSubmit={addGoal}>
         <div style={{ display: 'flex', gap: '0.75rem', width: '100%' }}>
@@ -96,7 +98,8 @@ const MyGoals = () => {
           <button type="submit">Додати</button>
         </div>
       </form>
-
+      )}
+    
       <div className="filter-bar">
         {['всі', 'активні', 'завершені', 'відкладені'].map((f) => (
           <button
@@ -105,7 +108,11 @@ const MyGoals = () => {
             className={`btn-filter ${filter === f ? 'active' : ''}`}
           >
             {f.charAt(0).toUpperCase() + f.slice(1)}
+
+           
+
           </button>
+          
         ))}
       </div>
 
